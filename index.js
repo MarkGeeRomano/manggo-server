@@ -8,8 +8,7 @@ app.use(require('cors')())
 app.get('/', async (req, res) => {
   try {
     const { imgData } = await Manggo.random()
-    // res.send(imgData)
-    res.send('hey lol')
+    res.send(imgData)
   } catch (err) {
     console.log(err)
     res.status(404).send('Error with Manggo!😿')
